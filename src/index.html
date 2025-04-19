@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurusan PPLG</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="/assets/fontawesome/css/all.min.css"></script>
+    <style>
+        * {
+            transition: all .2s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #003468;
+            --dark-navy: #001f3d;
+            --orange: #dd4f00;
+            --black: #111111;
+            --white: #f2f6ff;
+        }
+
+        .active p {
+            opacity: 1;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        .dropdown {
+            animation: slideRight forwards 0.8s ease-in-out;
+            -webkit-animation: slideRight forwards 0.8s ease-in-out;
+        }
+
+        .dropdown-txt {
+            transition: 0.5s ease-in-out;
+            -webkit-transition: 0.5s ease-in-out;
+            -moz-transition: 0.5s ease-in-out;
+            -ms-transition: 0.5s ease-in-out;
+            -o-transition: 0.5s ease-in-out;
+        }
+
+        .dd-arrow {
+            transition: .3s ease-in-out;
+        }
+
+        .fasil-card:hover .fasil-detail {
+            bottom: 0;
+            opacity: 1;
+        }
+
+        .prestasi-card::-webkit-scrollbar {
+            height: 8px;
+            background-color: transparent;
+        }
+
+        .prestasi-card::-webkit-scrollbar-thumb {
+            background: var(--orange);
+        }
+
+        .komunitas {
+            writing-mode: vertical-lr;
+        }
+
+        .community {
+            background: linear-gradient(#000000bc,#000000bc),url(/assets/img/communitty.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .border-rem {
+            border-bottom-right-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-[var(--white)] font-sans transition-all">
+    <!-- HEADER SECTION START -->
+    <header class="py-4 px-20 flex justify-between items-center sticky top-0 z-10" id="navbar">
+        <div>
+            <h1 class="text-5xl font-bold">Jurusan</h1>
+        </div>
+        <nav class="max-[838px]:absolute max-[838px]:hidden max-[838px]:left-0 max-[838px]:right-0 max-[838px]:top-20 max-[838px]:bg-[var(--dark-navy)] max-[838px]:p-4" id="nav-menu">
+            <ul class="flex items-center gap-8 max-[838px]:flex max-[838px]:flex-col max-[838px]:w-full">
+                <li><a href="" class="text-1xl max-[838px]:text-[var(--white)]">Komunitas</a></li>
+                <li><a href="" class="text-1xl max-[838px]:text-[var(--white)]">Prestasi</a></li>
+                <li><a href="" class="text-1xl max-[838px]:text-[var(--white)]">Aktivitas</a></li>
+            </ul>
+        </nav>
+        <div class="flex items-center gap-8">
+            <div>
+                <i class="fa-solid fa-moon text-2xl"></i>
+            </div>
+            <div>
+                <a href="" class="py-3 px-5 bg-[var(--orange)] text-[var(--white)] border-2 border-[var(--orange)] hover:border-[var(--orange)] hover:bg-transparent hover:text-[var(--black)]">
+                    Login
+                </a>
+            </div>
+        <a href="" class="hidden max-[838px]:block" id="menu-toggle"><i class="fa-solid fa-bars"></i></a>
+        <a href="" class="hidden" id="closed-nav"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+    </header>
+    <!-- HEADER SECTION END -->
+
+    <!-- MAIN CONTAINER START -->
+    <section class="main-container">
+
+        <!-- HERO SECTION START -->
+        <section class="flex gap-8 justify-between py-20 items-center px-30" id="home">
+            <div class="flex flex-col gap-4 w-1/2 max-w-[32rem]">
+                <h1 class="text-8xl font-bold text-[var(--navy)]">PPLG</h1>
+                <h3 class="text-2xl">Pengembangan Perangkat Lunak dan Gim</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam recusandae vero natus officia magnam odit dolor pariatur eius nulla adipisci quaerat velit, dicta esse earum culpa ea voluptates distinctio incidunt.</p>
+                <div>
+                    <a href="">
+                        <button class="py-3 px-5 bg-[var(--orange)] text-[var(--white)] border-2 hover:border-[var(--orange)] hover:bg-transparent hover:text-[var(--black)]">Cari Tahu</button>
+                    </a>
+                </div>
+                <div class="flex gap-4">
+                    <i class="fas fa-globe text-2xl"></i>
+                    <i class="fa-brands fa-instagram text-2xl"></i>
+                    <i class="fa-brands fa-tiktok text-2xl"></i>
+                    <i class="fa-brands fa-linkedin text-2xl"></i>    
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 w-1/2">
+                <div class="flex gap-4 w-full">
+                    <img src="/assets/img/rpl.jpg" alt="" class="aspect-[4/3] object-cover w-[calc(50%-0.5rem)]">
+                    <img src="/assets/img/rpl.jpg" alt="" class="aspect-[4/3] object-cover w-[calc(50%-0.5rem)]">
+                </div>
+                <div class="flex gap-4 w-full">
+                    <img src="/assets/img/rpl.jpg" alt="" class="aspect-[4/3] object-cover w-[calc(50%-0.5rem)]">
+                    <img src="/assets/img/rpl.jpg" alt="" class="aspect-[4/3] object-cover w-[calc(50%-0.5rem)]">
+                </div>
+            </div>
+        </section>
+        <!-- HERO SECTION END -->
+
+        <!-- STATISTIK SECTION START -->
+        <section class="flex justify-center py-20 px-30">
+            <div class="w-[90%] p-4 flex justify-between lg:w-full">
+                <div class="flex flex-col gap-">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-user text-8xl text-[var(--navy)] max-lg:text-5xl"></i>
+                        <h1 class="text-8xl font-bold text-[var(--orange)] counter max-lg:text-5xl" data-target="125">0</h1>
+                    </div>
+                    <div>
+                        <h1 class="text-6xl font-bold text-[var(--black)] max-lg:text-3xl">Siswa</h1>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-user-graduate text-8xl text-[var(--navy)] max-lg:text-5xl"></i>
+                        <h1 class="text-8xl font-bold text-[var(--orange)] counter max-lg:text-5xl" data-target="10">0</h1>
+                    </div>
+                    <div>
+                        <h1 class="text-6xl font-bold text-[var(--black)] max-lg:text-3xl">Guru</h1>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-handshake text-8xl text-[var(--navy)] max-lg:text-5xl"></i>
+                        <h1 class="text-8xl font-bold text-[var(--orange)] counter max-lg:text-5xl" data-target="50">0</h1>
+                    </div>
+                    <div>
+                        <h1 class="text-6xl font-bold text-[var(--black)] max-lg:text-3xl">Partner</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- STATISTIK SECTION END -->
+
+        <!-- PENJELASAN SECTION START -->
+        <section class="flex flex-col py-20 gap-10 px-30">
+            <div>
+                <h1 class="text-8xl text-[var(--dark-navy)] font-bold text-center">Penjelasan</h1>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex flex-col gap-4">
+                    <div class="dropdown p-4 cursor-pointer overflow-hidden" onclick="dropdown(0)">
+                        <div class="dropdown-title flex items-center gap-8">
+                            <h2 class="text-2xl text-[var(--orange)]">Definisi Jurusan PPLG</h2>
+                            <i class="fas fa-chevron-right dd-arrow text-[var(--orange)]"></i>
+                        </div>
+                        <p class="dropdown-txt opacity-0 h-0 mb-0 text-1xl">
+                            PPLG atau Pengembangan Perangkat Lunak dan Gim adalah sebuah
+                            jurusan di SMK (Sekolah Menengah Kejuruan). Jurusan ini mempelajari dan mendalami cara-cara mengembangkan perangkat lunak.Mulai dari pembuatan, pemeliharaan, manajemen kualitas, dan manajemen organisasi pengembangan perangkat lunak. <br />
+                            <br />
+                            Selain itu, jurusan PPLG juga berhubungan dengan software komputer
+                            seperti pembuatan aplikasi, website, game dan semua yang berhubungan dengan pemrograman. Singkatnya, jurusan PPLG eratkaitannya dengan coding, desain, dan algoritma.
+                        </p>
+                    </div>
+                    <div class="dropdown p-4 cursor-pointer overflow-hidden" onclick="dropdown(1)">
+                        <div class="dropdown-title flex items-center gap-8">
+                            <h2 class="text-2xl text-[var(--orange)]">Visi Jurusan PPLG</h2>
+                            <i class="fas fa-chevron-right dd-arrow text-[var(--orange)]"></i>
+                        </div>
+                        <p class="dropdown-txt opacity-0 h-0 mb-0 text-1xl">
+                            Menciptakan lulusan berkompeten, kreatif, dan memiliki daya saing
+                            global di bidang Pengembangan Perangkat Lunak dan Gim
+                        </p>
+                    </div>
+                    <div class="dropdown p-4 cursor-pointer overflow-hidden" onclick="dropdown(2)">
+                        <div class="dropdown-title flex items-center gap-8">
+                            <h2 class="text-2xl text-[var(--orange)]">Misi Jurusan PPLG</h2>
+                            <i class="fas fa-chevron-right dd-arrow text-[var(--orange)]"></i>
+                        </div>
+                        <p class="dropdown-txt opacity-0 h-0 mb-0 text-1xl open">
+                            1. Melaksanakan proses pembelajaran yang berkesan dan berkualitas serta menemamkan soft-skill untuk peningkatan kopetensipeserta didik <br />
+                            <br />
+                            2. Menghasilkan lulusan di bidang IT Developer yang memenuhi standar industri <br />
+                            <br />
+                            3. Menumbuhkan jiwa enterpreneurship bagi peserta didik melalui kegiatan Unit Produksi
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-4 max-lg:flex-col">
+                    <div class="flex flex-col gap-4">
+                        <img src="/assets/img/penjelasan/1.png" alt="" class="rounded-2xl">
+                        <img src="/assets/img/penjelasan/3.png" alt="" class="rounded-2xl">
+                    </div>
+                    <div>
+                        <img src="/assets/img/penjelasan/2.png" alt="" class="h-full object-cover rounded-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PENJELASAN SECTION END -->
+
+        <!-- BIDANG DAN PROSPEK KERJA START -->
+        <section class="py-20 flex flex-col gap-10 px-30">
+            <div>
+                <h1 class="text-8xl text-[var(--dark-navy)] font-bold text-center">Bidang</h1>
+            </div>
+            <div class="flex gap-10 max-lg:flex-wrap max-lg:gap-5 justify-center">
+                <div class="flex flex-col gap-4 max-lg:flex-row max-lg:w-[45%] items-center">
+                    <img src="/assets/img/bidang/1.png" alt="" class="p-4 bg-[var(--navy)] rounded-[50%] w-40">
+                    <div class="detail-bidang">
+                        <div class="inline-block">
+                            <h1 class="text-3xl p-2 rounded-[50%] bg-[var(--dark-navy)] text-[var(--white)]">01</h1>
+                        </div>
+                        <h1 class="text-2xl font-bold text-[var(--orange)]">Web Development</h1>
+                        <p>Front End, Back End & Full Stack Developer, Web Designer, Data Structurer</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 max-lg:flex-row-reverse max-lg:w-[45%] items-center">
+                    <div class="detail-bidang">
+                        <div class="inline-block">
+                            <h1 class="text-3xl p-2 rounded-[50%] bg-[var(--dark-navy)] text-[var(--white)]">02</h1>
+                        </div>
+                        <h1 class="text-2xl font-bold text-[var(--orange)]">App Development</h1>
+                        <p>Front End, Back End & Full Stack Developer, Web Designer, Data Structurer</p>
+                    </div>
+                    <img src="/assets/img/bidang/2.png" alt="" class="p-4 bg-[var(--navy)] rounded-[50%] w-40">
+                </div>
+                <div class="flex flex-col gap-4 max-lg:flex-row max-lg:w-[45%] items-center">
+                    <img src="/assets/img/bidang/3.png" alt="" class="p-4 bg-[var(--navy)] rounded-[50%] w-40">
+                    <div class="detail-bidang">
+                        <div class="inline-block">
+                            <h1 class="text-3xl p-2 rounded-[50%] bg-[var(--dark-navy)] text-[var(--white)]">03</h1>
+                        </div>
+                        <h1 class="text-2xl font-bold text-[var(--orange)]">Game Development</h1>
+                        <p>Front End, Back End & Full Stack Developer, Web Designer, Data Structurer</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 max-lg:flex-row-reverse max-lg:w-[45%] items-center">
+                    <div class="detail-bidang">
+                        <div class="inline-block">
+                            <h1 class="text-3xl p-2 rounded-[50%] bg-[var(--dark-navy)] text-[var(--white)]">04</h1>
+                        </div>
+                        <h1 class="text-2xl font-bold text-[var(--orange)]">Internet Of Things</h1>
+                        <p>Front End, Back End & Full Stack Developer, Web Designer, Data Structurer</p>
+                    </div>
+                    <img src="/assets/img/bidang/4.png" alt="" class="p-4 bg-[var(--navy)] rounded-[50%] w-40">
+                </div>
+                <div class="flex flex-col gap-4 max-lg:flex-row max-lg:w-[45%] items-center">
+                    <img src="/assets/img/bidang/5.png" alt="" class="p-4 bg-[var(--navy)] rounded-[50%] w-40">
+                    <div class="detail-bidang">
+                        <div class="inline-block">
+                            <h1 class="text-3xl p-2 rounded-[50%] bg-[var(--dark-navy)] text-[var(--white)]">05</h1>
+                        </div>
+                        <h1 class="text-2xl font-bold text-[var(--orange)]">Robotic Enginner</h1>
+                        <p>Front End, Back End & Full Stack Developer, Web Designer, Data Structurer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- BIDANG DAN PROSPEK KERJA  END -->
+
+        <!-- FASILITAS START -->
+        <section class="flex py-20 flex-col gap-10 px-30">
+            <div>
+                <h1 class="text-8xl text-[var(--dark-navy)] font-bold text-center">Fasilitas</h1>
+            </div>
+            <div class="flex flex-col gap-4">
+                <div class="flex gap-4 w-full">
+                    <div class="w-[20%] h-80 relative overflow-hidden fasil-card cursor-pointer">
+                        <img src="/assets/img/fasilitas/buku.png" alt="" class="object-cover brightness-50 w-full h-full">
+                        <div class="p-4 absolute -bottom-20 fasil-detail opacity-0">
+                            <h1 class="text-2xl text-[var(--orange)]">Buku</h1>
+                            <p class="text-[var(--white)]">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="w-[calc(60%-1rem)] h-80 relative overflow-hidden fasil-card cursor-pointer">
+                        <img src="/assets/img/fasilitas/komputer.png" alt="" class="object-cover brightness-50 w-full h-full">
+                        <div class="p-4 absolute -bottom-20 fasil-detail opacity-0">
+                            <h1 class="text-2xl text-[var(--orange)]">Komputer</h1>
+                            <p class="text-[var(--white)]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, repellat.</p>
+                        </div>
+                    </div>
+                    <div class="w-[calc(20%-1rem)] h-80 relative overflow-hidden fasil-card cursor-pointer">
+                        <img src="/assets/img/fasilitas/lab.png" alt="" class="object-cover brightness-50 w-full h-full">
+                        <div class="p-4 absolute -bottom-20 fasil-detail opacity-0">
+                            <h1 class="text-2xl text-[var(--orange)]">Lab</h1>
+                            <p class="text-[var(--white)]">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-4 w-full">
+                    <div class="w-[60%] h-80 relative overflow-hidden fasil-card cursor-pointer">
+                        <img src="/assets/img/fasilitas/tempat-sampah.png" alt="" class="object-cover brightness-50 w-full h-full">
+                        <div class="p-4 absolute -bottom-20 fasil-detail opacity-0">
+                            <h1 class="text-2xl text-[var(--orange)]">Tempat Sampah</h1>
+                            <p class="text-[var(--white)]">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="w-[calc(40%-1rem)] h-80 relative overflow-hidden fasil-card cursor-pointer">
+                        <img src="/assets/img/fasilitas/lampu.png" alt="" class="object-cover brightness-50 w-full h-full">
+                        <div class="p-4 absolute -bottom-20 fasil-detail opacity-0">
+                            <h1 class="text-2xl text-[var(--orange)]">Lampu</h1>
+                            <p class="text-[var(--white)]">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-4 w-full">
+                    <div class="w-[20%] h-80 relative overflow-hidden fasil-card cursor-pointer">
+                        <img src="/assets/img/fasilitas/papan.png" alt="" class="object-cover brightness-50 w-full h-full">
+                        <div class="p-4 absolute -bottom-20 fasil-detail opacity-0">
+                            <h1 class="text-2xl text-[var(--orange)]">Papan</h1>
+                            <p class="text-[var(--white)]">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="w-[calc(20%-1rem)] h-80 relative overflow-hidden fasil-card cursor-pointer">
+                        <img src="/assets/img/fasilitas/wifi.png" alt="" class="object-cover brightness-50 w-full h-full">
+                        <div class="p-4 absolute -bottom-20 fasil-detail opacity-0">
+                            <h1 class="text-2xl text-[var(--orange)]">Wifi</h1>
+                            <p class="text-[var(--white)]">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="w-[calc(60%-1rem)] h-80 relative overflow-hidden fasil-card cursor-pointer">
+                        <img src="/assets/img/fasilitas/ac.png" alt="" class="object-cover brightness-50 w-full h-full">
+                        <div class="p-4 absolute -bottom-20 fasil-detail opacity-0">
+                            <h1 class="text-2xl text-[var(--orange)]">AC</h1>
+                            <p class="text-[var(--white)]">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FASILITAS END -->
+
+        <!-- GURU START -->
+        <section class="flex py-20 flex-col gap-10 px-30">
+            <div>
+                <h1 class="text-8xl text-[var(--dark-navy)] font-bold text-center">Guru</h1>
+            </div>
+            <div class="flex justify-between gap-4 max-lg:flex-wrap max-lg:justify-center">
+                <div class="w-90 aspect-[4/5] relative">
+                    <img src="/assets/img/guru/nopa.jpeg" alt="" class="rounded-2xl w-full h-full object-cover brightness-75">
+                    <div class="bg-[var(--navy)] absolute bottom-0 p-4 flex w-full justify-between items-center border-rem">
+                        <div>
+                            <h1 class="text-3xl font-bold text-[var(--white)]">Nopa</h1>
+                            <h3 class="text-[var(--white)]">UI Design, Algoritma, Kewirausahaan</h3>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-arrow-up py-2 px-3 text-2xl rounded-[50%] bg-[var(--orange)] text-[var(--white)] rotate-45"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-90 aspect-[4/5] scale-110 relative max-lg:scale-100">
+                    <img src="/assets/img/guru/juliani.png" alt="" class="rounded-2xl w-full h-full object-cover brightness-75">
+                    <div class="bg-[var(--navy)] absolute bottom-0 p-4 flex w-full justify-between items-center border-rem">
+                        <div>
+                            <h1 class="text-3xl font-bold text-[var(--white)]">Juliani</h1>
+                            <h3 class="text-[var(--white)]">Web Programming, Database, Aplikasi</h3>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-arrow-up py-2 px-3 text-2xl rounded-[50%] bg-[var(--orange)] text-[var(--white)] rotate-45"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-90 aspect-[4/5] relative">
+                    <img src="/assets/img/guru/willy.jpeg" alt="" class="rounded-2xl w-full h-full object-cover brightness-75">
+                    <div class="bg-[var(--navy)] absolute bottom-0 p-4 flex w-full justify-between items-center border-rem">
+                        <div>
+                            <h1 class="text-3xl font-bold text-[var(--white)]">Willy</h1>
+                            <h3 class="text-[var(--white)]">Game Design, Game Development</h3>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-arrow-up py-2 px-3 text-2xl rounded-[50%] bg-[var(--orange)] text-[var(--white)] rotate-45"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- GURU END -->
+
+        <!-- PRRESTASI START -->
+        <section class="flex py-20 flex-col gap-10 px-30">
+            <div>
+                <h1 class="text-8xl text-[var(--dark-navy)] font-bold">Prestasi</h1>
+            </div>
+            <div class="flex gap-8 overflow-x-scroll pt-10 pb-4 prestasi-card">
+                <div class="w-80 relative flex-none">
+                    <img src="/assets/img/prestasi/web_technologies.jpeg" alt="" class="w-full h-full object-cover rounded-2xl">
+                    <div class="absolute bottom-0 bg-[var(--dark-navy)] w-full flex items-center justify-between gap-1 px-8 py-5 border-rem">
+                        <div>
+                            <h1 class="text-2xl text-[var(--white)] font-bold">Juara 2</h1>
+                            <h3 class="text-[var(--white)]">LKS Web Technologies</h3>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-arrow-up py-2 px-3 text-2xl rounded-[50%] bg-[var(--orange)] text-[var(--white)] rotate-45"></i>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <!-- PRRESTASI END -->
+
+        <!-- ALUMNI START -->
+        <section class="py-20 flex flex-col gap-10 px-30">
+            <div>
+                <h1 class="text-8xl text-[var(--dark-navy)] font-bold">Alumni</h1>
+            </div>
+            <div class="flex gap-8 overflow-x-scroll pt-10 pb-4 prestasi-card">
+                <div class="w-80 relative flex-none">
+                    <img src="/assets/img/prestasi/web_technologies.jpeg" alt="" class="w-full h-full object-cover rounded-2xl">
+                    <div class="absolute bottom-0 bg-[var(--dark-navy)] w-full flex items-center justify-between gap-1 px-8 py-5 border-rem">
+                        <div>
+                            <h1 class="text-2xl text-[var(--white)] font-bold">Risky Raju Hehe</h1>
+                            <h3 class="text-[var(--white)]">Tukang Masak</h3>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-arrow-up py-2 px-3 text-2xl rounded-[50%] bg-[var(--orange)] text-[var(--white)] rotate-45"></i>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <!-- ALUMNI END -->
+
+        <!-- KOMUNITAS START -->
+        <section class="flex bg-[var(--black)] relative items-center h-[90dvh]">
+            <div class="text-8xl text-[var(--white)] font-bold komunitas bg-[var(--navy)] h-full text-center py-20">Komunitas</div>
+            <div class="flex flex-col items-center gap-4 community h-full justify-center">
+                <div>
+                    <img src="/assets/img/desc_clipped.png" alt="" class="w-30">
+                </div>
+                <div class="flex flex-col items-center gap-4">
+                    <h1 class="text-8xl font-bold text-[var(--white)]">DESC</h1>
+                    <h3 class="text-4xl text-[var(--white)] font-bold">Developer Stikmas Community</h3>
+                    <p class="text-[var(--white)] text-center max-w-[70%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem labore repellendus amet sequi voluptatum quisquam necessitatibus culpa facilis fugit placeat!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut vitae, omnis nisi ad quod cum nihil harum id et ullam eum inventore enim iure reprehenderit nam aspernatur excepturi autem consequatur.</p>
+                </div>
+            </div>
+        </section>
+        <!-- KOMUNITAS END -->
+
+        <!-- KEGIATAN START -->
+        <section class="py-20 flex flex-col gap-10 px-30">
+            <div>
+                <h1 class="text-8xl text-[var(--dark-navy)] font-bold text-center">Aktivitas</h1>
+            </div>
+            <div class="flex gap-10 max-lg:flex-col">
+                <div class="flex flex-col gap-2 w-[50%] max-lg:w-full">
+                    <img src="/assets/img/aktivitas/1.png" alt="">
+                    <div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-calendar text-[var(--orange)]"></i>
+                                <p class="text-[var(--orange)]">27 November 2025</p>
+                            </div>
+                            <h1 class="text-4xl text-[var(--navy)]">Kegiatan Belajar Bersama Dalam Mengembangkan Bakat dan Minat di Bidang Teknologi</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni perferendis a recusandae rem optio ipsam impedit quisquam suscipit quae quidem magnam fuga velit labore molestias quis officia, enim minus porro?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col w-[calc(50%-2.5rem)] gap-8 max-lg:w-full ">
+                    <div class="flex gap-2 items-center">
+                        <img src="/assets/img/aktivitas/2.png" alt="" class="w-60 h-30 object-cover">
+                        <div class="flex flex-col">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-calendar text-[var(--orange)]"></i>
+                                <p class="text-[var(--orange)]">27 November 2025</p>
+                            </div>
+                            <h1 class="text-xl text-[var(--navy)]">Olahraga Bersama Untuk Mningkatkan Daya Tahan Tubuh dan Melatih Fisik</h1>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <img src="/assets/img/aktivitas/3.png" alt="" class="w-60 h-30 object-cover">
+                        <div class="flex flex-col">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-calendar text-[var(--orange)]"></i>
+                                <p class="text-[var(--orange)]">27 November 2025</p>
+                            </div>
+                            <h1 class="text-xl text-[var(--navy)]">Olahraga Bersama Untuk Mningkatkan Daya Tahan Tubuh dan Melatih Fisik</h1>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <img src="/assets/img/aktivitas/4.png" alt="" class="w-60 h-30 object-cover">
+                        <div class="flex flex-col">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-calendar text-[var(--orange)]"></i>
+                                <p class="text-[var(--orange)]">27 November 2025</p>
+                            </div>
+                            <h1 class="text-xl text-[var(--navy)]">Olahraga Bersama Untuk Mningkatkan Daya Tahan Tubuh dan Melatih Fisik</h1>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <img src="/assets/img/aktivitas/5.png" alt="" class="w-60 h-30 object-cover">
+                        <div class="flex flex-col">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-calendar text-[var(--orange)]"></i>
+                                <p class="text-[var(--orange)]">27 November 2025</p>
+                            </div>
+                            <h1 class="text-xl text-[var(--navy)]">Olahraga Bersama Untuk Mningkatkan Daya Tahan Tubuh dan Melatih Fisik</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- KEGIATAN END -->
+
+    </section>
+    <!-- MAIN CONTAINER END -->
+
+
+
+    <script src="script.js"></script>
+    <script src="/assets/fontawesome/js/all.min.js"></script>
+</body>
+</html>
